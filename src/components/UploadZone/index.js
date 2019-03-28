@@ -3,7 +3,7 @@ import { Upload, Icon } from "antd";
 
 const Dragger = Upload.Dragger;
 
-export const UploadZone = props => {
+const UploadZone = props => {
   return (
     <div>
       <h2>Upload your photo</h2>
@@ -22,3 +22,5 @@ export const UploadZone = props => {
     </div>
   );
 };
+
+export default UploadZone;
