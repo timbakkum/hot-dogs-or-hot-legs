@@ -11,6 +11,10 @@ export function UploadZone({ className, storage }) {
     reader.onload = r => {
       console.log(r.currentTarget.result);
 
+      const removeDataTypeFromBase64String = b => {
+        return b.split(",")[1];
+      };
+
       if (r.currentTarget.result) {
         fetch(
           "https://us-central1-hotdogsnicelegsv2.cloudfunctions.net/predictImage",
@@ -19,7 +23,10 @@ export function UploadZone({ className, storage }) {
             headers: {
               "Content-Type": "application/json"
             },
-            body: JSON.stringify({ dataURL: r.currentTarget.result })
+            mode: "no-cors",
+            body: JSON.stringify({
+              dataURL: removeDataTypeFromBase64String(r.currentTarget.result)
+            })
           }
         ).then(response => {
           console.log(response);
