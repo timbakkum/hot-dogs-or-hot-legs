@@ -9,7 +9,7 @@
 
 .app__main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   max-width: 1024px;
@@ -17,6 +17,10 @@
   margin: 0 auto;
 }
 .app__upload-zone {
+  padding: 40px;
+  border: 20px solid blue;
+  border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" ><text y="1em" font-size="18">🌭</text></svg>');
+  border-image-repeat: space;
 }
 .app__result-zone {
 }
