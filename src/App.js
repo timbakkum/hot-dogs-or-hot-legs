@@ -1,25 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import UploadZone from "./UploadZone";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>
+            <span role="img" aria-label="hotdog">
+              🌭
+            </span>{" "}
+            or{" "}
+            <span role="img" aria-label="hot legs">
+              🦵🦵
+            </span>
+          </h1>
         </header>
+
+        <UploadZone />
       </div>
     );
   }
