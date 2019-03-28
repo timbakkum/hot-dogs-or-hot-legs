@@ -2,14 +2,16 @@ import React from "react";
 import { message } from "antd";
 import { FirebaseDatabaseProvider } from "@react-firebase/database";
 import firebase from "firebase/app";
+import "firebase/database";
 import UploadZone from "./components/UploadZone";
 import ResultZone from "./components/ResultZone";
 import CFG from "./firebase-config";
 import "antd/dist/antd.css";
 import "./App.css";
 
+console.log(CFG);
 const App = () => (
-  <FirebaseDatabaseProvider config={CFG} firebase={firebase}>
+  <FirebaseDatabaseProvider firebase={firebase} {...CFG}>
     <div className="app">
       <header className="app__header">
         <h1>
